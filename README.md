@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         .glass {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -27,8 +27,8 @@
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+    <!-- Navigation (Sticky to Top) -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -52,7 +52,7 @@
     <section id="home" class="pt-32 pb-20 px-4">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h2 class="text-blue-600 font-semibold tracking-wide uppercase mb-2 text-sm">Welcome to my profile</h2>
+                <h2 class="text-blue-600 font-semibold tracking-wide uppercase mb-2 text-sm uppercase">Welcome to my profile</h2>
                 <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
                     I'm <span class="text-blue-600">HEND</span>, Trader & Web3 Developer.
                 </h1>
@@ -71,9 +71,9 @@
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80">
                     <div class="absolute inset-0 bg-blue-600 rounded-3xl rotate-6 opacity-20"></div>
+                    <!-- Menggunakan avatar wolf sesuai referensi gambar terakhir -->
                     <img src="https://raw.githubusercontent.com/hendroah/Personal-data/75ff41d07aeb7619a516b339d6ad6393f149d84f/Desain%20tanpa%20judul_20260223_171612_0000.png" 
-                         alt="HEND Profile Photo" 
-                         onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80'"
+                         alt="HEND Profile Avatar" 
                          class="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl hover:scale-105 transition duration-500">
                 </div>
             </div>
@@ -84,6 +84,7 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-8 rounded-full"></div>
             <p class="text-slate-600 leading-relaxed text-lg mb-6">
                 I am a dedicated professional with over 5 years of experience in blockchain technology and financial markets. I am passionate about developing innovative Web3 solutions and conducting deep technical analysis to navigate market volatility.
             </p>
@@ -114,13 +115,13 @@
             <h2 class="text-3xl font-bold text-center mb-12">Latest Projects</h2>
             
             <div class="grid grid-cols-1 gap-12">
-                <!-- Row 1: Web3 Card UI (Portrait) -->
+                <!-- Project 1: Web3 Card UI (Portrait focus) -->
                 <div class="flex justify-center">
                     <div class="bg-white max-w-sm w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100 project-card flex flex-col">
                         <div class="p-4 bg-slate-50 flex justify-center">
                             <div class="relative w-full aspect-[3/4] shadow-lg rounded-2xl overflow-hidden border border-slate-200">
                                 <img src="https://raw.githubusercontent.com/hendroah/Personal-data/ae89fd9527bc3550e085650de881b722d13e476a/card.gif" 
-                                     alt="dApp Interface Portrait" 
+                                     alt="dApp Interface" 
                                      class="w-full h-full object-cover">
                             </div>
                         </div>
@@ -140,12 +141,12 @@
                     </div>
                 </div>
 
-                <!-- Row 2: Market Analysis (Landscape) -->
+                <!-- Project 2: Market Analysis (Landscape) -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 project-card flex flex-col md:flex-row">
-                    <div class="md:w-2/3 p-4 bg-slate-50 flex justify-center">
+                    <div class="md:w-2/3 p-4 bg-slate-50">
                         <div class="relative w-full aspect-video shadow-lg rounded-2xl overflow-hidden border border-slate-200">
                             <img src="https://raw.githubusercontent.com/hendroah/Personal-data/d2c7c0a1281f2cb26f2c34f78bdcb6113cd80910/Screenshot_2026-02-20-12-09-25-181_com.tradingview.tradingviewapp.jpg" 
-                                 alt="Trading Analysis Landscape" 
+                                 alt="Market Analysis" 
                                  class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -155,7 +156,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">Market Analysis</h3>
                         <p class="text-slate-600 mb-6">
-                            Advanced technical indicator setups and strategic market psychology mapping for digital assets in a comprehensive visual format.
+                            Advanced technical indicator setups and strategic market psychology mapping for digital assets.
                         </p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-[10px] font-bold">ANALYSIS</span>
@@ -164,12 +165,12 @@
                     </div>
                 </div>
 
-                <!-- Row 3: Contract Audit (Landscape) -->
+                <!-- Project 3: Contract Audit (Landscape) -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 project-card flex flex-col md:flex-row-reverse">
-                    <div class="md:w-2/3 p-4 bg-slate-50 flex justify-center">
+                    <div class="md:w-2/3 p-4 bg-slate-50">
                         <div class="relative w-full aspect-video shadow-lg rounded-2xl overflow-hidden border border-slate-200 bg-slate-900">
                             <img src="https://raw.githubusercontent.com/hendroah/Personal-data/16dacab4cc4fc421f732806935426d656b46d258/editor-without-bg.png" 
-                                 alt="Smart Contract Editor Landscape" 
+                                 alt="Contract Audit" 
                                  class="w-full h-full object-contain p-4">
                         </div>
                     </div>
@@ -179,7 +180,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-slate-900 mb-3">Contract Audit</h3>
                         <p class="text-slate-600 mb-6">
-                            In-depth security auditing and optimization for EVM-compatible smart contracts to ensure safe deployment within the blockchain ecosystem.
+                            In-depth security auditing and optimization for EVM-compatible smart contracts.
                         </p>
                         <div class="flex gap-2">
                             <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded text-[10px] font-bold">SECURITY</span>
@@ -213,7 +214,7 @@
                         </div>
                     </div>
                     
-                    <!-- Social Links Updated -->
+                    <!-- Social Links -->
                     <div class="mt-8">
                         <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">Connect with me</p>
                         <div class="flex space-x-5">
